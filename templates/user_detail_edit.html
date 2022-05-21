@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ found_user.first_name }} {{ found_user.last_name }}</h1>
+    <form action="/users" method="POST">
+        <input type="text" name="first_name" placeholder="{{ found_user.first_name }}"></input>
+        <input type="text" name="last_name" placeholder="{{ found_user.last_name }}"></input>
+        <input type="text" name="image_url" placeholder="{{ found_user.image_url }}"></input>
+        <button>Update User Info</button>
+    </form>
+</body>
+</html>
